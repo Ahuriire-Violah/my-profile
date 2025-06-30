@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahuriire Violah Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Correct Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Hero Section Animation */
+        .hero {
+            background: linear-gradient(135deg, #161617, #2c3cea);
+            animation: gradientMove 10s ease infinite;
+            background-size: 400% 400%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Button Animation */
+        .btn-animated {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn-animated:hover {
+            transform: scale(1.1);
+            background-color: #ffc107 !important;
+            color: #000 !important;
+        }
+
+        /* Social Icons */
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 28px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffc107;
+        }
+
+        /* Image and Text Animation */
+        .animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-in-out;
+        }
+
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Image */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+
+        /* Footer Styling */
+        footer {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ahuriire Violah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-white">
+        <img src="images/profile2.jpg" alt="Ahuriire Violah" class="img-fluid rounded-circle mb-4 profile-img animate">
+        <h1 class="animate">Hello, I'm Ahuriire Violah</h1>
+        <p class="animate">Web Developer | Designer | Tech Enthusiast</p>
+        <a href="projects.html" class="btn btn-light btn-animated mt-3 animate">View My Work</a>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons mt-4 animate">
+            <a href="http://github.com/Ahuriire-Violah" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/violah-ahuriire-216405345/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        &copy; 2025 Ahuriire Violah | All Rights Reserved
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Simple JavaScript Scroll Animation -->
+    <script>
+        const animatedItems = document.querySelectorAll('.animate');
+
+        window.addEventListener('load', () => {
+            animatedItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('show');
+                }, index * 300);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
