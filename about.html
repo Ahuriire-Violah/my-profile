@@ -5,9 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Me - Ahuriire Violah</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a2e0e6ea12.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
     <style>
         body {
             background-color: #f8f9fa;
@@ -61,13 +71,19 @@
             transform: scale(1.05);
             color: white;
         }
+
+        .nav-link:hover {
+            color: #8f94fb !important;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container">
             <a class="navbar-brand" href="index.html">Violah's Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -85,13 +101,13 @@
     </nav>
 
     <!-- About Section -->
-    <section class="container my-5">
-        <div class="card">
+    <section class="container my-5 py-5">
+        <div class="card" data-aos="fade-up">
             <div class="row align-items-center">
-                <div class="col-md-4 text-center mb-4">
+                <div class="col-md-4 text-center mb-4" data-aos="fade-right">
                     <img src="images/profile2.jpg" alt="Ahuriire Violah" class="img-fluid rounded-circle profile-img" />
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" data-aos="fade-left">
                     <h2>About Me</h2>
                     <p>Hello! I am <strong>Ahuriire Violah</strong>, a passionate lady in tech who is always eager to learn, grow, and push boundaries in the digital world.</p>
                     <p>I love combining creativity and technical skills to build responsive, user-friendly websites and applications that make a difference.</p>
@@ -100,12 +116,12 @@
                     <p>Currently pursuing a <strong>Bachelor of Business Administration (BBA)</strong> in Artificial Intelligence at Nexford University, I blend tech skills with business insight to innovate and create meaningful impact.</p>
 
                     <!-- CV Download Button -->
-                    <a href="documents/Ahuriire_Violah_CV.pdf" download class="btn-cv mt-3">
+                    <a href="Documents/Ahuriire_Violah_CV.pdf" download class="btn-cv mt-3" data-aos="zoom-in">
                         <i class="fas fa-download"></i> Download My CV
                     </a>
 
-                    <h4 class="mt-4">Skills</h4>
-                    <ul class="skills-list list-unstyled">
+                    <h4 class="mt-4" data-aos="fade-up">Skills</h4>
+                    <ul class="skills-list list-unstyled" data-aos="fade-up">
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>Bootstrap 5</li>
@@ -136,7 +152,17 @@
         <p>&copy; 2025 Ahuriire Violah. All Rights Reserved.</p>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
